@@ -57,6 +57,7 @@
       <section id="brief" class="prose">
         {{ section.content | trim | safe }}
       </section>
+      <div><em>Last update:  {{ now() | date(format="%Y-%m-%d") }}</em></div>
     {% elif config.extra.homepage_layout == 'list' %}
       {% set blog_section_path = config.extra.blog_section_path | trim_start_matches(pat="/") %}
       {% set section_md_path = blog_section_path ~ "/_index.md" %}
