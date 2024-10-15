@@ -8,7 +8,9 @@
 <div class="wrapper">
   <p class="error">
     <span>ENOENT</span>
+    {% if config.extra.not_found_error_text %}
     <span>{{ config.extra.not_found_error_text }}</span>
+    {% endif %}
   </p>
   <a class="instant" href="/">{{ config.extra.not_found_recover_text }}</a>
 </div>
